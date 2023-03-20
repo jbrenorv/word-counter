@@ -1,0 +1,20 @@
+
+
+código
+esse rápido é código
+esse
+
+rápido é
+
+esse esse
+
++ - $ & * ! ' " # % ( ) [ ] @
+
+código esse é
+
+e_ignora_caracteres_especiais_quebra_de_linha_e_espacos_em_branco
+
+e_ordena_de_forma_decrescente_pelo_numero_de_ocorrencias
+
+código
+
