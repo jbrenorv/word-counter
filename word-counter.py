@@ -1,10 +1,15 @@
+from collections import Counter
+from os import path
 import argparse
 import re
-from os import path
-from collections import Counter
 
 
 def word_conter(file_path):
+
+  if not path.exists(file_path):
+    print(f'Erro: Arquivo {file_path} nao encontrado.')
+    exit()
+
   file = open(file_path)
   file_content = file.read()
   words = list(filter(lambda word: word != '', re.split(r'[\s\W]+', file_content)))
@@ -17,14 +22,11 @@ def word_conter(file_path):
   else:
     print('Nenhuma palavra encontrada.')
 
+
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('-p', default="sample.txt", type=str)
   args = parser.parse_args()
   file_path = args.p
-
-  if not path.exists(file_path):
-    print(f'Erro: Arquivo {file_path} nao encontrado.')
-    exit()
 
   word_conter(file_path)
